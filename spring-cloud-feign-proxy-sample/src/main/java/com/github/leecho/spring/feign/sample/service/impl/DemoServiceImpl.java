@@ -1,4 +1,4 @@
-package com.github.leecho.spring.feign.sample;
+package com.github.leecho.spring.feign.sample.service.impl;
 
 import com.github.leecho.spring.feign.sample.model.Demo;
 import com.github.leecho.spring.feign.sample.service.DemoService;
@@ -21,19 +21,19 @@ public class DemoServiceImpl implements DemoService {
 
 	@Override
 	public Demo create(Demo demo) {
-		System.out.println("Create executed : " + demo);
+		log.info("Create executed : " + demo);
 		return demo;
 	}
 
 	@Override
 	public Demo update(Demo demo) {
-		System.out.println("Update execute :" + demo);
+		log.info("Update execute :" + demo);
 		return demo;
 	}
 
 	@Override
 	public Demo delete(String id) {
-		System.out.println("Delete execute : " + id);
+		log.info("Delete execute : " + id);
 		return Demo.builder().name("demo-" + id).data("data-" + id).build();
 	}
 

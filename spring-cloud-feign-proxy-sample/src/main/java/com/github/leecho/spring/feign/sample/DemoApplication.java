@@ -1,12 +1,10 @@
-package com.github.leecho.spring.feign.sample.service.impl;
+package com.github.leecho.spring.feign.sample;
 
 import com.github.leecho.spring.cloud.feign.EnableFeignProxies;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
 @EnableFeignProxies(basePackages = "com.github.leecho")
 @ComponentScan("com.github.leecho")
 @SpringBootApplication
